@@ -1,0 +1,32 @@
+### Create a new user
+POST http://localhost:3000/users/signup
+content-type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "password"
+}
+
+### Get a single user via Id
+GET http://localhost:3000/users/1
+
+### Get a single user via email
+GET http://localhost:3000/users?email=test@gmail.com
+
+### Signing in 
+POST http://localhost:3000/users/signin
+content-type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "password"
+}
+
+### Check who's currently signed in
+# GET http://localhost:3000/users/whoami
+
+### Sign out for the current user
+POST http://localhost:3000/users/signout
+
+### Check the custom decorator (currently signed in user)
+GET http://localhost:3000/users/whoaminew
